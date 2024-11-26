@@ -1,4 +1,8 @@
-from controller import process_user_input
+import view, model, controller
 
+
+def start():
+    view.show_menu()
 if __name__ == "__main__":
-    process_user_input()
+    model.login()
+    model.order()

@@ -1,3 +1,19 @@
 {
-    "age": 30
+    "users": [
+        {
+            "login": "12",
+            "password": "ÛÂ",
+            "age": 23
+        },
+        {
+            "login": "ÖÏÂÀ",
+            "password": "54",
+            "age": 45
+        },
+        {
+            "login": "qx",
+            "password": "12",
+            "age": 12
+        }
+    ]
 }
