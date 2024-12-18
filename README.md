@@ -4,7 +4,7 @@
 
 1. Клонируйте репозиторий:
 
-      git clone https://github.com/ваш_пользователь/ваш_репозиторий](https://github.com/Froo-tech/Pizza_shop.git
+      git clone https://github.com/Froo-tech/Pizza_shop.git
    
 
 2. Перейдите в директорию проекта:
