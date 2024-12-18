@@ -1,0 +1,56 @@
+body {
+    background-color: black;
+}
+
+.time{
+    /* Ожидание */
+
+    position: absolute;
+    width: 658px;
+    height: 1160px;
+    left: 20px;
+    top: -22px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 155px;
+
+    color: #FFFFFF;
+
+
+}
+
+p.pizza {
+    /* Пицы */
+    position: absolute;
+margin-top: 600px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px; /* Значительно уменьшите размер шрифта */
+    line-height: 1.5;
+    color: #FFFFFF;
+    /* Скрытие содержимого для элемента */
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .pizza p {
+      /* Стиль для абзаца внутри класса .pizza */
+      position: relative;
+      top: 329px; /* Позиционируйте относительно родителя */
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 1; /* Делаем текст видимым */
+      pointer-events: auto; /* Разрешаем взаимодействие с текстом */
+  }
+iframe{
+    position: absolute;
+    top: 200px;
+    left: centr;
+    width: 400px;
+    height: 550px;
+}
+  

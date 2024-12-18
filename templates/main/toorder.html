@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ожидание заказа">
+    <meta name="keywords" content="ожидание, заказ, пицца">
+    <title>Ожидание заказа</title>
+    <link rel="stylesheet" href="{% static 'main/css/todo.css' %}" type="text/css">
+    <style>
+        /* Добавьте стили для iframe */
+        iframe {
+
+            position: absolute;
+            top: 385px;
+            left: 50%; /* Центрируем по горизонтали */
+            transform: translateX(-50%); /* Сдвигаем на половину ширины iframe */
+            border: 0; /* Убираем рамку */
+            width: 900px;
+            height: 550px;
+
+
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <section class="time">
+            <h1 style=" position: absolute;
+    width: 658px;
+    height: 1160px;
+    left: 20px;
+    top: -22px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 155px;
+
+    color: #FFFFFF;">Ожидание доставки</h1>
+        </section>
+    </main>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d401.02547761361296!2d86.08067841113076!3d55.34853033610177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42d80bfb0ce3890b%3A0x8436e7ded4bf4f3e!2z0YPQuy4g0JrRgNCw0YHQvdC-0LDRgNC80LXQudGB0LrQsNGPLCAxMTcsINCa0LXQvNC10YDQvtCy0L4sINCa0LXQvNC10YDQvtCy0YHQutCw0Y8g0L7QsdC7LiwgNjUwMDAw!5e0!3m2!1sru!2sru!4v1734014124548!5m2!1sru!2sru" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

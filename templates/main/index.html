@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}" type="text/css">
+</head>
+<body>
+<label class="text" for="fruits">Пицца:</label>
+<select class="pizza" id="fruits" name="fruits">
+    <option class="Margherita" value="Margherita">Маргарита</option>
+    <option class="Pepperoni" value="Pepperoni">Пепперони</option>
+    <option class="Hawaiian" value="Hawaiian">Гавайская</option>
+    <option class="Vegetarian" value="Vegetarian">Вегетарианская</option>
+</select>
+
+<label class="text2" for="drinks">Напитки:</label>
+<select class="drinks" id="drinks" name="drinks">
+    <option class="cola" value="cola">Кока кола</option>
+    <option class="water" value="water">Вода</option>
+    <option class="morse" value="morse">Морс</option>
+    <option class="tea" value="tea">Чай</option>
+    <option class="none" value="none">Ничего</option>
+</select>
+
+<label class="text3" for="toppings">Добавки:</label>
+<select class="toppings" id="toppings" name="toppings">
+    <option class="basil" value="basil">Базилик</option>
+    <option class="ham" value="ham">Ветчина</option>
+    <option class="pepper" value="pepper">Перец</option>
+    <option class="cheese" value="cheese">Сыр</option>
+    <option class="none" value="none">Ничего</option>
+</select>
+<hr class="h-line">
+
+<button class="submit" id="submit">Submit</button>
+
+<p>Ваш заказ:</p>
+<div id="order"></div>
+<button class="do_order" id="do_order">Заказать</button>
+
+<script>
+    // Получаем элементы
+    const selectPizza = document.getElementById('fruits');
+    const selectDrinks = document.getElementById('drinks');
+    const selectToppings = document.getElementById('toppings'); // Исправлено: изменено на selectToppings
+    const submitButton = document.getElementById('submit');
+    const orderDiv = document.getElementById('order');
+    const doOrderButton = document.getElementById('do_order');
+
+    submitButton.addEventListener('click', () => {
+        // Получаем выбранные значения
+        const selectedPizza = selectPizza.value;
+        const selectedDrink = selectDrinks.value;
+        const selectedToppings = selectToppings.value;
+
+        // Формируем текст заказа
+        const orderText = `Пицца: ${selectedPizza}, Напиток: ${selectedDrink}, Добавки: ${selectedToppings}`; // Исправлено: изменен синтаксис
+
+        // Обновляем содержимое div с заказом
+        orderDiv.innerText = orderText;
+    });
+
+    doOrderButton.addEventListener('click', () => {
+        // Получаем выбранные значения
+        const selectedPizza = selectPizza.value;
+        const selectedDrink = selectDrinks.value;
+        const selectedToppings = selectToppings.value;
+
+        // Формируем URL с параметрами
+        const url = `doorder?pizza=${encodeURIComponent(selectedPizza)}&drink=${encodeURIComponent(selectedDrink)}&toppings=${encodeURIComponent(selectedToppings)}`; // Исправлено: добавлен параметр для добавок
+
+        // Перенаправляем пользователя на новый URL
+        window.location.href = url;
+    });
+</script>
+</body>
+</html>
